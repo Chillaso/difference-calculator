@@ -1,6 +1,6 @@
 import { LitElement, css, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { Router } from '@vaadin/router';
+// import { Router } from '@vaadin/router';
 import { registerSW } from 'virtual:pwa-register';
 
 import './script/pages/app-home';
@@ -60,17 +60,17 @@ export class AppIndex extends LitElement {
     // for more info check out the lit docs https://lit.dev/docs/components/lifecycle/
 
     // For more info on using the @vaadin/router check here https://vaadin.com/router
-    const router = new Router(this.shadowRoot?.querySelector('#routerOutlet'));
-    router.setRoutes([
-      // temporarily cast to any because of a Type bug with the router
-      {
-        path: '',
-        animate: true,
-        children: [
-          { path: '/', component: 'app-home' },
-        ],
-      } as any,
-    ]);
+    // const router = new Router(this.shadowRoot?.querySelector('#routerOutlet'));
+    // router.setRoutes([
+    //   // temporarily cast to any because of a Type bug with the router
+    //   {
+    //     path: '',
+    //     animate: true,
+    //     children: [
+    //       { path: '/', component: 'app-home' },
+    //     ],
+    //   } as any,
+    // ]);
     registerSW({ immediate: true });
   }
 
@@ -78,7 +78,7 @@ export class AppIndex extends LitElement {
     return html`
       <div>
         <main>
-          <div id="routerOutlet"></div>
+          <app-home></app-home>
         </main>
       </div>
     `;
