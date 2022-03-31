@@ -11,7 +11,7 @@ export default defineConfig({
     VitePWA({
       // you can remove base and scope pwa plugin will use the base on vite: defaults to /
       base: "/difference-calculator/",
-      scope: "/",
+      scope: "/difference-calculator/",
       registerType: "autoUpdate",
       manifest: false,
       workbox: {
