@@ -5,6 +5,7 @@ import { registerSW } from 'virtual:pwa-register';
 
 import './script/pages/app-home';
 import './script/components/header';
+import './script/components/calculator';
 import './styles/global.css';
 
 @customElement('app-index')
@@ -67,13 +68,6 @@ export class AppIndex extends LitElement {
         animate: true,
         children: [
           { path: '/', component: 'app-home' },
-          {
-            path: '/about',
-            component: 'app-about',
-            action: async () => {
-              await import('./script/pages/app-about.js');
-            },
-          },
         ],
       } as any,
     ]);

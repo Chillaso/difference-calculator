@@ -3,9 +3,7 @@ import { property, customElement } from 'lit/decorators.js';
 
 @customElement('app-header')
 export class AppHeader extends LitElement {
-  @property({ type: String }) title = 'PWA Starter';
-
-  @property() enableBack: boolean = false;
+  @property({ type: String }) title = 'Calculadora porcentual';
 
   static get styles() {
     return css`
@@ -52,22 +50,10 @@ export class AppHeader extends LitElement {
     super();
   }
 
-  updated(changedProperties: any) {
-    if (changedProperties.has('enableBack')) {
-      console.log('enableBack', this.enableBack);
-    }
-  }
-
   render() {
     return html`
       <header>
-        <div id="back-button-block">
-          ${this.enableBack ? html`<fluent-anchor appearance="accent" href="/">
-            Back
-          </fluent-anchor>` : null}
-
-          <h1>${this.title}</h1>
-        </div>
+        <h1>${this.title}</h1>
       </header>
     `;
   }

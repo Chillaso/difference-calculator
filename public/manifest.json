@@ -1,12 +1,12 @@
 {
   "id": "/",
   "scope": "/",
-  "name": "PWA Starter",
+  "name": "Calculadora porcentual",
   "display": "standalone",
   "start_url": "/",
-  "short_name": "starter",
+  "short_name": "calculator",
   "theme_color": "#E1477E",
-  "description": "This is a PWA Starter app",
+  "description": "Calculadora porcentual",
   "orientation": "any",
   "background_color": "#E1477E",
   "related_applications": [],
@@ -49,12 +49,5 @@
     "utility"
   ],
   "shortcuts": [
-    {
-      "name": "Open About",
-      "short_name": "About",
-      "description": "Open the about page",
-      "url": "/about",
-      "icons": [{ "src": "assets/icons/icon_192.png", "sizes": "192x192" }]
-    }
   ]
 }
