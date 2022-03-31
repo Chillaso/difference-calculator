@@ -65,14 +65,14 @@ export class AppCalculator extends LitElement {
     const firstNumber: number = this.firstNumber
     const secondNumber: number = this.secondNumber
     var result: number = (firstNumber - secondNumber) / firstNumber * 100;
-    this.result = result.toFixed(2);
+    this.result = +result.toFixed(2);
   }
 
   porcentualDifference(){
     const firstNumber: number = this.firstNumber
     const secondNumber: number = this.secondNumber
     var result: number = ((firstNumber - secondNumber) / ((firstNumber + secondNumber) / 2)) * 100;
-    this.result = result.toFixed(2);
+    this.result = +result.toFixed(2);
   }
 
   render() {
